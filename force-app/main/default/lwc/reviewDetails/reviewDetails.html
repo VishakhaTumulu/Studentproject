@@ -1,0 +1,54 @@
+<template>
+    <lightning-layout horizontal-align="spread" class="slds-border_bottom">
+        <lightning-layout-item size="12" class="slds-text-heading_large">
+            Review
+        </lightning-layout-item>
+    </lightning-layout>
+    <div class="slds-p-bottom_medium"></div>
+    
+    <lightning-record-view-form record-id={recordId} object-api-name="Student_Details__c">
+    <lightning-accordion class="example-accordion slds-grid slds-gutters" active-section-name={activeSections}>
+        <lightning-accordion-section name="StudentDetail" label="Student Detail">            
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="First_Name__c"></lightning-output-field>
+                        <lightning-output-field field-name="Middle_Name__c"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="Last_Name__c"></lightning-output-field>
+                        <lightning-output-field field-name="UG_Percentage__c"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="Last_Name__c"></lightning-output-field>
+                        <lightning-output-field field-name="UG_Percentage__c"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="University_Name__c"></lightning-output-field>
+                        <lightning-output-field field-name="Year_of_Graduation__c"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="Gender__c"></lightning-output-field>
+                        <lightning-output-field field-name="Document_Type__c"></lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="Document_Number__c"></lightning-output-field>
+                        <lightning-output-field field-name="Confirm_Document_Number__c"></lightning-output-field>
+                    </div>
+                    </div>          
+
+        </lightning-accordion-section>
+          
+        <lightning-accordion-section name="ContactDetail" label="Contact Detail"></lightning-accordion-section>
+        <lightning-accordion-section name="CourseDetail" label="Course Detail"></lightning-accordion-section>
+        <lightning-accordion-section name="PaymentDetail" label="Payment Detail"></lightning-accordion-section>
+
+
+    </lightning-accordion>
+    <footer class="slds-modal__footer" style=" height:75px; margin-top: 0px; margin-bottom: -18px" >
+        <lightning-button class="slds-float_left"  type="cancel" variant="Brand" onclick={handleCancel} label="Exit"> </lightning-button> 
+        <lightning-button class="slds-float_right" type="submit" variant="Brand"  label="Save" onclick={handleRecordSave}></lightning-button>           
+    </footer>
+    
+    
+</lightning-record-view-form>
+</template>

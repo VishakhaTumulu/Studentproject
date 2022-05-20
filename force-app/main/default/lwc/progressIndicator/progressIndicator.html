@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-theme_default">
+        <div class="slds-p-around_medium">
+            <lightning-progress-indicator type="path" current-step={currentTab} variant="base">
+                <lightning-progress-step label="Student Detail"  onclick={NavigateToTab} value="Student Detail">
+                </lightning-progress-step>
+                <lightning-progress-step label="Contact Details"  onclick={NavigateToTab} value="Contact Details">
+                </lightning-progress-step>
+                <lightning-progress-step label="Course Detail"  onclick={NavigateToTab} value="Course Detail">
+                </lightning-progress-step>
+                <lightning-progress-step label="Payment Detail"  onclick={NavigateToTab} value="Payment Detail">
+                </lightning-progress-step>
+	            <lightning-progress-step label="Review"  onclick={NavigateToTab} value="Review">
+                </lightning-progress-step>
+            </lightning-progress-indicator>
+
+
+                          
+        </div>
+    </div>
+</template>

@@ -1,0 +1,49 @@
+<template>
+    <lightning-layout horizontal-align="spread" class="slds-border_bottom">
+        <lightning-layout-item size="12" class="slds-text-heading_large">
+            Course Detail
+        </lightning-layout-item>
+    </lightning-layout>
+    <div class="slds-p-bottom_medium"></div>
+    
+    <div class="slds-p-bottom_medium"></div>
+    
+    <lightning-record-edit-form object-api-name="Course_Details__c" density="comfy">
+        <lightning-messages></lightning-messages>
+
+                <div class="slds-grid slds-wrap">
+            <span class= "slds-col slds-size_6-of-12">    
+                 <lightning-input-field field-name="Client_Name__c" required="true"> </lightning-input-field> </span>
+                 <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Name" required="true"> </lightning-input-field> </span>
+                    
+            </div>  
+                        
+            <div class="slds-grid slds-wrap">
+                <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Course_Name__c" required="true"></lightning-input-field> </span>
+         <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="Course_ID__c" required="true"></lightning-input-field> </span>
+         
+         </div>
+         <div class="slds-grid slds-wrap">
+            <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Course_Start_Date__c" required="true"></lightning-input-field></span>
+                <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="Course_End_Date__c" required="true"></lightning-input-field></span>
+         </div>
+        
+        <div class="slds-grid slds-wrap">
+            <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="Years of Experience" required="true"></lightning-input-field></span>
+                <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="Course_Fee__c" required="true"></lightning-input-field> </span>
+        </div>
+        <div class="slds-grid slds-wrap">
+                <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Completed_Courses__c" required></lightning-input-field></span>
+                <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Additional_Comments__c" required></lightning-input-field></span>
+        </div>
+        <hr style="height:1px;border-width:1px;color:black;background-color:black">
+            <footer class="slds-modal__footer" style=" height:75px; margin-top: 0px; margin-bottom: -18px" >
+                <lightning-button class="slds-float_left"  type="brand" variant="Brand" onclick={handleexit} label="Exit"> </lightning-button> 
+                <lightning-button class="slds-float_right" type="submit" variant="Brand"  label="Save and Next" onclick={handleRecordSave}></lightning-button>           
+            </footer>    
+     
+        
+        
+       </lightning-record-edit-form>
+
+</template>

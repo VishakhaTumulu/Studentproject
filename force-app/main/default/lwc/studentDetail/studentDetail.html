@@ -1,0 +1,49 @@
+<template>
+        <lightning-layout horizontal-align="spread" class="slds-border_bottom">
+            <lightning-layout-item size="12" class="slds-text-heading_large">
+                Student Detail
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-p-bottom_medium"></div>
+        
+        <div class="slds-p-bottom_medium"></div>
+        
+        <lightning-record-edit-form object-api-name="Student_Details__c" record-id={recordId} density="comfy" onsuccess={handleSuccess} onerror={handleError}>
+            <lightning-messages></lightning-messages>
+            
+
+            <div class="slds-grid slds-wrap">
+                <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="First_Name__c" required="true"> </lightning-input-field> </span>                                     
+                     <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Middle_Name__c" required="true"> </lightning-input-field> </span>
+                   
+                </div>  
+                            
+                <div class="slds-grid slds-wrap">
+                    <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Last_Name__c" required="true"></lightning-input-field> </span>
+                    <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="UG_Percentage__c" ></lightning-input-field> </span>
+                 </div>
+             <div class="slds-grid slds-wrap">
+                <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="University_Name__c" required="true"></lightning-input-field> </span>
+                <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Year_of_Graduation__c" ></lightning-input-field></span>
+             </div>         
+             <div class="slds-grid slds-wrap">
+                <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="Gender__c"></lightning-input-field></span>
+                <span class= "slds-col slds-size_6-of-12"> <lightning-input-field field-name="Document_Type__c" ></lightning-input-field></span>
+            </div>
+            <div class="slds-grid slds-wrap">
+            <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Document_Number__c" ></lightning-input-field></span>
+            <span class= "slds-col slds-size_6-of-12"><lightning-input-field field-name="Confirm_Document_Number__c" ></lightning-input-field></span>
+            </div>
+            <hr style="height:1px;border-width:1px;color:black;background-color:black">
+            
+            <footer class="slds-modal__footer" style=" height:75px; margin-top: 0px; margin-bottom: -18px" >
+                <lightning-button class="slds-float_left" variant="brand" label="Exit" type="cancel" onclick={handleCancel}></lightning-button>
+                &nbsp;&nbsp;          
+                 <lightning-button class="slds-float_right" type="submit" variant="brand" label="Save" onclick={saveAndNewClick}></lightning-button>           
+            </footer>
+        
+            
+            
+           </lightning-record-edit-form>
+    
+</template>
