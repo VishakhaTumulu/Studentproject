@@ -3,10 +3,16 @@ import { NavigationMixin } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 
-export default class Parent extends LightningElement {
+
+    export default class Parent extends NavigationMixin(LightningElement) {
+
     
     currentTab = 'Student Detail';
-    studentid;
+     studentid;
+     contactid;
+     courseid;
+     paymentid;
+     reviewid;
 
 
    // step=1;
@@ -101,7 +107,7 @@ export default class Parent extends LightningElement {
     }
 
     handleContactData(event){
-        f(event.detail != undefined)
+        if(event.detail != undefined)
          { 
             console.log(event.detail);
             this.contactid =  event.detail;
@@ -109,6 +115,37 @@ export default class Parent extends LightningElement {
         }
 
     }
+
+    handleCourseData(event){
+        if(event.detail != undefined)
+         { 
+            console.log(event.detail);
+            this.courseid =  event.detail;
+            console.log(this.courseid);
+        }
+
+    }
+
+    handlePaymentData(event){
+        if(event.detail != undefined)
+         { 
+            console.log(event.detail);
+            this.paymentid =  event.detail;
+            console.log(this.paymentid);
+        }
+
+    }
+
+    handleReviewData(event){
+        if(event.detail != undefined)
+         { 
+            console.log(event.detail);
+            this.reviewid =  event.detail;
+            console.log(this.reviewid);
+        }
+
+    }
+}
     
 /* get isStep1(){
     console.log("isStep1");
@@ -184,4 +221,3 @@ handlechange5(){
 
 
 
-}

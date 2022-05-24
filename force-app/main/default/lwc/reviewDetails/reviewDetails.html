@@ -44,9 +44,12 @@
 
 
     </lightning-accordion>
+    <hr style="height:1px;border-width:1px;color:black;background-color:black">
+    
     <footer class="slds-modal__footer" style=" height:75px; margin-top: 0px; margin-bottom: -18px" >
-        <lightning-button class="slds-float_left"  type="cancel" variant="Brand" onclick={handleCancel} label="Exit"> </lightning-button> 
-        <lightning-button class="slds-float_right" type="submit" variant="Brand"  label="Save" onclick={handleRecordSave}></lightning-button>           
+        <lightning-button class="slds-float_left" variant="brand" label="Exit" type="cancel" onclick={handleCancel}></lightning-button>
+        &nbsp;&nbsp;          
+         <lightning-button class="slds-float_right" type="submit" variant="brand" label="Save" onclick={saveAndNewClick}></lightning-button>           
     </footer>
     
     

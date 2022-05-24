@@ -1,0 +1,11 @@
+<template>
+    
+    <div class="slds-box slds-theme_default"> 
+    Enter value: <lightning-input 
+                    type="text" 
+                    value={strInput}
+                    onchange={handleChange}></lightning-input> <br>
+
+    <c-childcmp str-output={strInput}></c-childcmp>
+</div>
+</template>

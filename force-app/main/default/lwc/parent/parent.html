@@ -21,7 +21,7 @@
 
     <template if:true={isStep3}> 
         <div class="slds-p-horizantal_xx-large">
-            <c-course-details></c-course-details>
+            <c-course-details oncontactsaved={handleCourseData} recordid={courseid}></c-course-details>
             <lightning-button  class="slds-align_absolute-center" type="submit" icon-name="utility:jump_to_left" variant="Brand"  label="Previous" onclick={doPreviousPage}></lightning-button>
             
         </div>
@@ -29,17 +29,18 @@
 
     <template if:true={isStep4}> 
         <div class="slds-p-horizantal_xx-large">
-            <c-payment-detail></c-payment-detail>
+            <c-payment-detail oncontactsaved={handlePaymentData} recordid={paymentid}></c-payment-detail>
             <lightning-button  class="slds-align_absolute-center" type="submit" icon-name="utility:jump_to_left" variant="Brand"  label="Previous" onclick={doPreviousPage}></lightning-button>
         </div>   
     </template>
 
     <template if:true={isStep5}> 
         <div class="slds-p-horizantal_xx-large">
-            <c-review-details></c-review-details>
+            <c-review-details oncontactsaved={handleReviewData} recordid={reviewid}></c-review-details>
             <lightning-button  class="slds-align_absolute-center" type="submit" icon-name="utility:jump_to_left" variant="Brand"  label="Previous" onclick={doPreviousPage}></lightning-button>
         </div>
     </template>
+
     <template if:false={isStep5}> 
       <lightning-button  class="slds-align_absolute-center" type="submit" icon-name="utility:jump_to_right" variant="Brand"  label="Next" onclick={doNextPage}></lightning-button>
     </template>
